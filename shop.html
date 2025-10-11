@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop – SOFRESH JUICES & UJI POWER</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">SOFRESH JUICES & UJI POWER</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="shop-container">
+    <!-- Juices -->
+    <section class="category">
+      <h2>🥤 Fresh Juices (KES 50 & 100)</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="Passion Juice" data-price="50">
+          <img src="images/passion-juice.jpg" alt="Passion">
+          <h3>Passion</h3><p>KES 50</p>
+          <button class="order-btn">Order</button>
+        </div>
+        <div class="product-card" data-name="Beetroot Juice" data-price="70">
+          <img src="images/beetroot.jpg" alt="Beetroot">
+          <h3>Beetroot</h3><p>KES 70</p>
+          <button class="order-btn">Order</button>
+        </div>
+        <!-- Add more juices -->
+      </div>
+    </section>
+
+    <!-- Health Boosters -->
+    <section class="category">
+      <h2>💪 Health Boosters</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="Ginger Shot" data-price="50">
+          <img src="images/ginger-shot.jpg" alt="Ginger">
+          <h3>Ginger Shots</h3><p>KES 50</p>
+          <button class="order-btn">Order</button>
+        </div>
+        <div class="product-card" data-name="Mkombero Powder" data-price="20">
+          <img src="images/mkombero.jpg" alt="Mkombero">
+          <h3>Mkombero Powder</h3><p>From KES 20</p>
+          <button class="order-btn">Order</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Uji Power & Men's Cup — Special Section -->
+    <section class="special-section">
+      <h2>⚡ Energy & Wellness Drinks</h2>
+
+      <div class="special-product">
+        <img src="images/uji-power.jpg" alt="Uji Power">
+        <div class="special-info">
+          <h3>Uji Power (KES 50, 70, 100)</h3>
+          <p><strong>Ingredients:</strong> Sorghum, millet, maize, groundnuts, dates, honey, cinnamon.</p>
+          <p>Nourishing, energizing, and perfect for breakfast or post-workout recovery.</p>
+          <button class="order-btn" data-name="Uji Power" data-price="70">Order Now</button>
+        </div>
+      </div>
+
+      <div class="special-product">
+        <img src="images/mens-cup.jpg" alt="Men's Cup">
+        <div class="special-info">
+          <h3>Men’s Cup (KES 50)</h3>
+          <p><strong>Ingredients:</strong> Ginger, garlic, lemon, honey, moringa, ashwagandha.</p>
+          <p>A natural vitality booster crafted for strength and stamina.</p>
+          <button class="order-btn" data-name="Men's Cup" data-price="50">Order Now</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer & Modal (same as homepage) -->
+  <footer class="footer">
+    <div class="quick-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>Working Hours: Mon – Sun | 7AM – 11PM</p>
+    <div class="social-icons">
+      <a href="https://wa.me/254706822154"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:amosjakinda@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+254737616894"><i class="fas fa-phone"></i></a>
+    </div>
+  </footer>
+
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modal-title">Order Now</h3>
+      <p><strong>Price:</strong> <span id="modal-price">KES 0</span></p>
+      <p><strong>Delivery Option:</strong></p>
+      <label><input type="radio" name="delivery" value="bike"> 🛵 Bike Delivery</label><br>
+      <label><input type="radio" name="delivery" value="pickup"> 🏪 Customer Pickup</label><br><br>
+      <button id="confirmOrder">Confirm Order</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
