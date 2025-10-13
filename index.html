@@ -1572,7 +1572,8 @@
             // Product detail page navigation
             const learnMoreButtons = document.querySelectorAll('[data-page]');
             learnMoreButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
                     const pageId = this.getAttribute('data-page');
                     
                     // Hide all pages
@@ -1587,8 +1588,7 @@
                         mensCupPage.style.display = 'block';
                     }
                     
-                    // Scroll to top
-                    window.scrollTo(0, 0);
+                  
                 });
             });
             
@@ -1597,14 +1597,14 @@
                 e.preventDefault();
                 ujiPowerPage.style.display = 'none';
                 energyPage.style.display = 'block';
-                window.scrollTo(0, 0);
+               
             });
             
             document.getElementById('backToEnergy2').addEventListener('click', function(e) {
                 e.preventDefault();
                 mensCupPage.style.display = 'none';
                 energyPage.style.display = 'block';
-                window.scrollTo(0, 0);
+              
             });
             
             // Order modal functionality
@@ -1627,6 +1627,7 @@
             
             orderButtons.forEach(button => {
                 button.addEventListener('click', function() {
+                    
                     currentProduct = {
                         name: this.getAttribute('data-product'),
                         prices: JSON.parse(this.getAttribute('data-prices'))
@@ -1745,6 +1746,7 @@
     </script>
 </body>
 </html>
+
 
 
 
