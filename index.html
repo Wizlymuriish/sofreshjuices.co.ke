@@ -177,7 +177,16 @@
         }
         
         .section-title h2 {
-            font-size: 70px;
+            font-size:70px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+            color: var(--primary);
+            color: hsl(110, 100%, 50%);
+
+        }
+        .section-title h5 {
+            font-size:50px;
             position: relative;
             display: inline-block;
             margin-bottom: 15px;
@@ -186,7 +195,7 @@
 
         }
         
-        .section-title h2::after {
+        .section-title h3::after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -887,6 +896,52 @@
         .back-button:hover {
             color: var(--primary-dark);
         }
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  background-color: white;
+  min-width: 120px;
+  z-index: 1000;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  overflow: visible; /* Ensure it doesn't hide overflow */
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+html {
+  scroll-behavior: smooth;
+}
         
         /* Responsive Design */
         @media (max-width: 992px) {
@@ -947,14 +1002,17 @@
                <span class="orange-text">& UJI POWER</span>
             </a>
             <nav>
-                <ul>
-                    <li><a href="#details">About</a></li>
-                    <li><a href="#juices">Juices</a></li>
-                    <li><a href="#boosters">Boosters</a></li>
-                    <li><a href="#energy">Energy</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                 <div class="dropdown">
+   <button class="dropbtn"><i class="fas fa-bars"></i></button>
+  <div class="dropdown-content">
+    <a href="#details">About</a>
+    <a href="#juices">Juices</a>
+    <a href="#boosters">Boosters</a>
+    <a href="#energy">Energy</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contacts</a>
+  </div>
+</div>
             </nav>
         </div>
     </header>
@@ -1229,9 +1287,9 @@
     <section id="energy">
         <div class="container">
             <div class="section-title">
-                <h2>⚡ Energy Foods
+                <h5>⚡ Energy Foods
                     <span class="orange-text2">& Drinks</span>
-                </h2>
+                </h5>
                 <p>Nutritious energy foods and drinks for strength, health, and wellness.</p>
             </div>
             <div class="menu-grid">
@@ -1791,7 +1849,15 @@
                 this.innerHTML = navMenu.classList.contains('active') ? 
                     '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
             });
-            
+              const navLinks = document.querySelectorAll('.nav-link');
+  const dropdown = document.getElementById('nav-menu');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      dropdown.style.display = 'none'; // or toggle a class if using CSS
+    });
+  });
+
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
