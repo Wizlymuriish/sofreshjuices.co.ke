@@ -6,7 +6,998 @@
     <title>SOFRESH JUICES & UJI POWER | Fresh & Energizing Drinks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #3bed00e8; /* Sea Green */
+            --primary-dark: #1dfa00; /* Forest Green */
+            --secondary: #000000; /* Gold */
+            --light: #ececec;
+            --dark: #000000;
+            --gray: #090809;
+            --light-gray: #0056ac;
+            --white: #ffffff;
+            --beige: #F5F5DC;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --blue: #000000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: var(--beige);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .green-text {
+          color: #04ff00;
+            font-size: 20px;
+        }
+        .orange-text {
+            color: orange;
+            font-size: 20px;
+        }
+        .green-text2 {
+          color: #04ff00;
+          
+        }
+        .orange-text2{
+            color: orange;
+           
+        }
+        .green-texta{
+          color: #04ff00;
+            font-size: 30px;
+        }
+        .orange-texta{
+            color: orange;
+            font-size: 30px;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 35px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo i {
+            color: var(--gray);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--blue);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+           #bg-video {
+             position: fixed;
+             top: 0; left: 0;
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #1dfa00;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-weight: 3000;
+            opacity: 10;
+            color: #ffffff;
+            color: var(-);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: var(--secondary);
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: var(--dark);
+        }
+        
+        .btn-primary:hover {
+            background: var(--beige);
+        }
+        
+        section {
+            padding: 80px 0;
+            
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size:70px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+            color: var(--primary);
+            color: hsl(110, 100%, 50%);
+
+        }
+        .section-title h5 {
+            font-size:50px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+            color: var(--primary);
+            color: hsl(110, 100%, 50%);
+
+        }
+        
+        .section-title h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 0px;
+            background: var(--primary-dark);
+            color: #19e415;
+        }
+        .section-title p{
+            color: var(--primary);
+            font-size: 20px;
+        }
+        
+
+       
+        
+        /* Redesigned First Details Section */
+        .details-section {
+            background: var(--beige);
+            padding: 100px 0;
+        }
+        .special-img {
+          display: block;
+          margin: 20px auto;
+          max-width: 300px;
+          width: 100%;
+          border-radius: 15px;
+          box-shadow: 0 4px 10px rgb(0, 0, 0);
+          object-fit: cover;
+          height: auto;
+          
+  
+         }
+
+        .details-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .details-text {
+            flex: 1;
+        }
+        
+        .details-text h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+            color: var(--primary);
+        }
+        
+        .details-text p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        
+        .feature-text h4 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .details-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 500px;
+        }
+        
+        .details-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Menu Section */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .menu-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgb(172, 224, 3);
+        }
+        
+        .menu-img {
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        .menu-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .menu-card:hover .menu-img img {
+            transform: scale(1.5);
+        }
+        
+        .menu-content {
+            padding: 25px;
+        }
+        
+        .menu-content h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        .menu-content h6 {
+            font-size: 25px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .menu-content p {
+            color: var(--black);
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+        
+        .menu-prices {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .price-tag {
+            background: var(--blue);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .menu-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .menu-actions .btn {
+            padding: 10px;
+            font-size: 14px;
+            width: 100%;
+        }
+        
+        /* Features Section */
+        .features-section {
+            background: var(--beige);
+        }      
+         
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: var(--beige);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-50px);
+        }
+        
+        .feature-icon-large {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--dark);
+            font-size: 36px;
+        }
+        
+        .feature-card h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            background: var(--beige);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 80px;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: 'Montserrat', serif;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--gray);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--white);
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        
+        .contact-details {
+            margin-bottom: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black);
+            font-size: 24px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h4 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .contact-text p, .contact-text a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 18px;
+            transition: var(--transition);
+        }
+        
+        .contact-text a:hover {
+            color: var(--primary);
+        }
+        
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+        }
+        
+        .opening-hours {
+            background: var(--beige);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .opening-hours h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .hours-list {
+            list-style: none;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--beige);
+            color: var(--shadow);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .footer-content h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .footer-content p {
+            margin-bottom: 20px;
+            color: #000000;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgb(0, 0, 0);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            padding-top: 30px;
+            border-top: 1px solid rgb(0, 0, 0);
+            color: #b0b0b0;
+            font-size: 14px;
+        }
+        .copyright p {
+          color: #000000;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: var(--white);
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--gray);
+        }
+        
+        .modal h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .modal p {
+            margin-bottom: 25px;
+            color: var(--gray);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+        }
+        
+        .size-options {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        .size-option {
+            flex: 1;
+            min-width: 120px;
+            padding: 15px;
+            border: 2px solid var(--light-gray);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .size-option.active {
+            border-color: var(--primary);
+            background: rgba(46, 139, 87, 0.1);
+        }
+        
+        .size-option h4 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .size-option p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .order-summary {
+            background: var(--beige);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .order-summary h4 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .order-total {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 10px;
+        }
+        
+        .whatsapp-redirect {
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .whatsapp-redirect i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        /* Product Detail Page Styles */
+        .product-detail-page {
+            display: none;
+            padding: 80px 0;
+        }
+        
+        .product-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .product-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--primary);
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            flex: 1;
+        }
+        
+        .product-info h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .product-info p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--gray);
+            color: var(--white);
+        }
+        
+        .product-ingredients {
+            margin-bottom: 40px;
+        }
+        
+        .ingredients-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .ingredient-card {
+            background: var(--beige);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .ingredient-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px;
+        }
+        
+        .ingredient-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .ingredient-name {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .ingredient-description {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: var(--transition);
+        }
+        
+        .back-button:hover {
+            color: var(--primary-dark);
+        }
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: var(--shadow);
+  color: #000;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  background-color: white;
+  min-width: 120px;
+  z-index: 1000;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  overflow: visible; /* Ensure it doesn't hide overflow */
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+html {
+  scroll-behavior: smooth;
+}
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .details-container {
+                flex-direction: column;
+            }
+            .details-image {
+                width: 100%;
+                height: 400px;
+            }
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+            .product-header {
+                flex-direction: column;
+            }
+            .product-image {
+                width: 100%;
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                height: 600px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -32,6 +1023,7 @@
             </nav>
         </div>
     </header>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -46,13 +1038,16 @@
 </video>
         </div>
     </section>
+
     <!-- Redesigned First Details Section -->
     <section class="details-section" id="details">
         <div class="container">
             <div class="details-container">
                 <div class="details-text">
+                   
                     <h2> Welcome to    <span class="green-text2">SOFRESH JUICES</span>
                     <span class="orange-text2">& UJI POWER</span></h2>
+                   
                     <p>Your go-to spot for fresh, healthy, and energizing drinks in Kiharu,Mwangaza kwa Amoh, Murang’a University. We specialize in delicious fruit juices, wellness boosters, and traditional energy drinks ,freshly made, affordable, and packed with power!</p>
                     <div class="features-list">
                         <div class="feature-item">
@@ -99,11 +1094,17 @@
             </div>
         </div>
     </section>
+
     <!-- Juices Section -->
+     
 </section>
+
+
+
     <section id="juices">
         <div class="container">
             <div class="section-title">
+                
                 <h2>🍸 Our Juice Menu</h2>
                 <p>Enjoy our refreshing selection of natural juices made from real fruits.</p>
             </div>
@@ -210,6 +1211,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Juice 7 -->
                 <div class="menu-card">
                     <div class="menu-img">
@@ -230,8 +1232,10 @@
             </div>
         </div>
     </section>
+
     <!-- Health Boosters Section -->
     <section class="features-section" id="boosters">
+        
             <div class="section-title">
                 <h2>🌿 Health 
                     <span class="orange-text2">Boosters</span>
@@ -285,6 +1289,7 @@
             </div>
         </div>
     </section>
+
     <!-- Energy Drinks Section -->
     <section id="energy">
         <div class="container">
@@ -343,6 +1348,7 @@
                             <div class="price-tag">Ksh. 50</div>
                         </div>
                         <div class="menu-actions">
+                           
                             <button class="btn order-btn" data-product="Cassava pieces" data-prices='{"Standard":50}'>Order Now</button>
                         </div>
                     </div>
@@ -353,13 +1359,16 @@
                         <img src="ngwashe2.jpg" alt="ngwashe">
                     </div>
                     <div class="menu-content">
+                        
                         <h6>Ngwashe/Sweetpotatoes</h6> 
                         <p>Ngwashe (sweet potatoes) are naturally sweet, nutritious root vegetables rich in fiber, vitamins A and C. 
+
 </p>
                         <div class="menu-prices">
                             <div class="price-tag">Ksh. 50</div>
                         </div>
                         <div class="menu-actions">
+                           
                             <button class="btn order-btn" data-product="Ngwashe/Sweetpotatoes" data-prices='{"Standard":50}'>Order Now</button>
                         </div>
                     </div>
@@ -376,6 +1385,7 @@
                             <div class="price-tag">Ksh. 50</div>
                         </div>
                         <div class="menu-actions">
+                          
                             <button class="btn order-btn" data-product="Arrowroots/Nduma" data-prices='{"Standard":50}'>Order Now</button>
                         </div>
                     </div>
@@ -383,6 +1393,7 @@
             </div>
         </div>
     </section>
+
     <!-- Uji Power Product Detail Page -->
     <section class="product-detail-page" id="uji-power-page">
         <div class="container">
@@ -390,6 +1401,7 @@
                 <h2>Boiled Cassava</h2>
                 <p>A hearty, energy-rich traditional root that’s naturally gluten-free and packed with carbohydrates</p>
             </div>
+            
             <div class="product-header">
                 <div class="product-image">
                     <img src="uji power.webp" alt="Uji Power">
@@ -407,6 +1419,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="product-ingredients">
                 <h3 class="ingredients-title">What Makes Uji Power Special?</h3>
                 <div class="ingredients-grid">
@@ -418,6 +1431,7 @@
                         <div class="ingredient-name">Groundnuts</div>
                         <div class="ingredient-description">Groundnuts, also known as peanuts, are nutritious legumes rich in protein and healthy fats. They can be eaten roasted, boiled, or blended into paste, offering a crunchy and satisfying snack.</div>
                     </div>
+                    
                     <!-- Ingredient 2 -->
                     <div class="ingredient-card">
                         <div class="ingredient-image">
@@ -426,6 +1440,7 @@
                         <div class="ingredient-name">SoyBeans</div>
                         <div class="ingredient-description">Soybeans are protein-rich legumes widely used in making milk, tofu, and flour. Packed with fiber, vitamins, and essential amino acids, they're a healthy plant-based option for both meals and snacks.</div>
                     </div>
+                    
                     <!-- Ingredient 3-->
                     <div class="ingredient-card">
                         <div class="ingredient-image">
@@ -444,11 +1459,13 @@
                     </div>
                 </div>
             </div>
+            
             <div class="back-button" id="backToEnergy">
                 <i class="fas fa-arrow-left"></i> Back to Energy Drinks
             </div>
         </div>
     </section>
+
     <!-- Men's Cup Product Detail Page -->
     <section class="product-detail-page" id="mens-cup-page">
         <div class="container">
@@ -456,6 +1473,7 @@
                 <h2>Men's Cup - Vitality Blend</h2>
                 <p>Formulated specifically for men's health and vitality</p>
             </div>
+            
             <div class="product-header">
                 <div class="product-image">
                     <img src="mencup.jpeg" alt="Men's Cup">
@@ -471,6 +1489,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="product-ingredients">
                 <h3 class="ingredients-title">Key Ingredients in Men's Cup</h3>
                 <div class="ingredients-grid">
@@ -514,13 +1533,16 @@
                         <div class="ingredient-name">Avocado</div>
                         <div class="ingredient-description">Avocado juice is a creamy, nutrient-rich drink packed with healthy fats, vitamins, and fiber. It’s smooth, satisfying, and perfect for boosting energy, skin health, and overall wellness.</div>
                     </div>
+                   
                 </div>
             </div>
+            
             <div class="back-button" id="backToEnergy2">
                 <i class="fas fa-arrow-left"></i> Back to Energy Drinks
             </div>
         </div>
     </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials-section" id="reviews">
         <div class="container">
@@ -576,6 +1598,7 @@
             </div>
         </div>
     </section>
+
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="container">
@@ -626,6 +1649,7 @@
                             <li>
                                 <span>Monday - Sunday</span>
                                 <span>7:00 AM - 11:00 PM</span>
+                                
                             </li>
                         </ul>
                     </div>
@@ -636,6 +1660,7 @@
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -645,6 +1670,8 @@
                 </h3>
                 <p>Premium quality fresh juices and traditional energy drinks delivered to your doorstep. Order now and enjoy the taste of nature!</p>
                 <div class="social-links">
+                    
+                  
                 </div>
             </div>
             <div class="copyright">
@@ -652,6 +1679,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Order Modal -->
     <div class="modal" id="orderModal">
         <div class="modal-content">
@@ -673,6 +1701,221 @@
             <button class="btn" id="completeOrder" style="width: 100%;">Complete Order</button>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Page Navigation
+            const pages = document.querySelectorAll('.page');
+            const productDetailPages = document.querySelectorAll('.product-detail-page');
+            const energyPage = document.getElementById('energy');
+            const ujiPowerPage = document.getElementById('uji-power-page');
+            const mensCupPage = document.getElementById('mens-cup-page');
+            
+            // Show home page by default
+            energyPage.style.display = 'block';
+            
+            // Product detail page navigation
+            const learnMoreButtons = document.querySelectorAll('[data-page]');
+            learnMoreButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    
+                    // Hide all pages
+                    energyPage.style.display = 'none';
+                    ujiPowerPage.style.display = 'none';
+                    mensCupPage.style.display = 'none';
+                    
+                    // Show selected page
+                    if (pageId === 'uji-power') {
+                        ujiPowerPage.style.display = 'block';
+                    } else if (pageId === 'mens-cup') {
+                        mensCupPage.style.display = 'block';
+                    }
+                    
+                  
+                });
+            });
+            
+            // Back buttons
+            document.getElementById('backToEnergy').addEventListener('click', function(e) {
+                e.preventDefault();
+                ujiPowerPage.style.display = 'none';
+                energyPage.style.display = 'block';
+               
+            });
+            
+            document.getElementById('backToEnergy2').addEventListener('click', function(e) {
+                e.preventDefault();
+                mensCupPage.style.display = 'none';
+                energyPage.style.display = 'block';
+              
+            });
+            
+            // Order modal functionality
+            const orderButtons = document.querySelectorAll('.order-btn');
+            const orderModal = document.getElementById('orderModal');
+            const closeModal = document.getElementById('closeModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const sizeOptions = document.getElementById('sizeOptions');
+            const orderSummary = document.getElementById('orderSummary');
+            const selectedItem = document.getElementById('selectedItem');
+            const totalAmount = document.getElementById('totalAmount');
+            const completeOrder = document.getElementById('completeOrder');
+            const whatsappRedirect = document.getElementById('whatsappRedirect');
+            let currentProduct = null;
+            let selectedSize = null;
+            let selectedPrice = null;
+            
+            // WhatsApp number for the shop owner (Kenyan format)
+            const shopWhatsApp = "254706822154";
+            
+            orderButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    
+                    currentProduct = {
+                        name: this.getAttribute('data-product'),
+                        prices: JSON.parse(this.getAttribute('data-prices'))
+                    };
+                    modalTitle.textContent = `Order ${currentProduct.name}`;
+                    
+                    // Populate size options based on product prices
+                    sizeOptions.innerHTML = '';
+                    let firstSize = null;
+                    for (const [size, price] of Object.entries(currentProduct.prices)) {
+                        const sizeOption = document.createElement('div');
+                        sizeOption.className = 'size-option';
+                        if (!firstSize) {
+                            sizeOption.classList.add('active');
+                            firstSize = size;
+                            selectedSize = size;
+                            selectedPrice = price;
+                        }
+                        sizeOption.innerHTML = `
+                            <h4>${size}</h4>
+                            <p>Ksh. ${price}</p>
+                        `;
+                        sizeOption.addEventListener('click', function() {
+                            document.querySelectorAll('.size-option').forEach(opt => {
+                                opt.classList.remove('active');
+                            });
+                            this.classList.add('active');
+                            selectedSize = size;
+                            selectedPrice = price;
+                            updateOrderSummary();
+                        });
+                        sizeOptions.appendChild(sizeOption);
+                    }
+                    
+                    // Update order summary with first size
+                    if (firstSize) {
+                        updateOrderSummary();
+                    }
+                    orderSummary.style.display = 'block';
+                    whatsappRedirect.style.display = 'none';
+                    completeOrder.style.display = 'block';
+                    orderModal.style.display = 'flex';
+                });
+            });
+            
+            function updateOrderSummary() {
+                selectedItem.textContent = `${currentProduct.name} (${selectedSize})`;
+                totalAmount.textContent = `Ksh. ${selectedPrice}`;
+            }
+            
+            closeModal.addEventListener('click', function() {
+                orderModal.style.display = 'none';
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === orderModal) {
+                    orderModal.style.display = 'none';
+                }
+            });
+            
+            completeOrder.addEventListener('click', function() {
+                // Show redirect message
+                completeOrder.style.display = 'none';
+                whatsappRedirect.style.display = 'block';
+                
+                // Create WhatsApp message with order details
+                const message = `Hello Sofresh Juices & Uji Power, I'd like to order ${currentProduct.name} (${selectedSize}) for Ksh. ${selectedPrice}. Please confirm my order.`;
+                const whatsappUrl = `https://wa.me/${shopWhatsApp}?text=${encodeURIComponent(message)}`;
+                
+                // Redirect to WhatsApp after a short delay
+                setTimeout(() => {
+                    window.location.href = whatsappUrl;
+                }, 1500);
+            });
+            
+            // Mobile menu toggle
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+            mobileToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                this.innerHTML = navMenu.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+              const navLinks = document.querySelectorAll('.nav-link');
+  const dropdown = document.getElementById('nav-menu');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      dropdown.style.display = 'none'; 
+    });
+  });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Sticky header on scroll
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
